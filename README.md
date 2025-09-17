@@ -1,1 +1,0 @@
-# Deeo-thought-frontend-Assignment
