@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="desert.css" />
+</head>
+<body>
+  <div class="cart">
+     &#128722;Cart: <span id="cartCount">0</span> items
+  </div>
+
+
+  
+
+  <main class="container">
+
+  
+    <div class="recipe-card">
+      <h2>Fruit custard</h2>
+      
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fy5AfMGOn_A?si=ZV8eaBMwFFJJ1jma" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <ul>
+        <li>For custard base:
+
+2 cups milk (full cream)
+
+2 tablespoons custard powder (vanilla flavor)
+
+3 tablespoons sugar (adjust to taste)</li>
+        <li>Fruits (chopped into small cubes):
+
+1 banana
+
+1 apple
+
+1 mango
+
+1 orange
+
+10-15 grapes
+
+1 pomegranate (optional)
+
+4-5 strawberries (optional)</li>
+       
+      </ul>
+    
+      <button onclick="toggleSteps('steps1')">Show Steps</button>
+
+  <div id="steps1" style="display: none;">
+
+  <p>Mix custard powder:
+In a small bowl, mix 2 tbsp custard powder with ¼ cup cold milk. Stir well without lumps.</p>
+
+<p>2.Boil milk:
+In a saucepan, boil 2 cups of milk. Once it starts boiling, reduce heat.</p>
+
+<p>3.Add sugar & custard mix:
+Add sugar and stir. Then slowly add custard mixture while stirring continuously.</p>
+
+<p>4.Cook until thick:
+Let it simmer on low heat for 2–3 mins, stirring constantly, until it thickens. Turn off the heat and cool.</p>
+
+<p>5.Chill it:
+Refrigerate custard for 1-2 hours until cold.</p>
+
+<p>6.Add fruits:
+Once chilled, add chopped fruits. Mix gently.</p>
+
+<p>7.Serve cold:
+Garnish with pomegranate seeds or mint leaves. Serve chilled!</p>
+</p>
+  </div>
+  
+
+
+
+<button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+
+
+    
+    <div class="recipe-card">
+      <h2>Chocolate Mug Cake</h2>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Ekn_C3ee4tM?si=y7a33WrSI4H8c4pG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <ul>
+        <li>Flour - 4 tbsp</li>
+        <li>Sugar - 3 tbsp</li>
+        <li>Cocoa powder - 2 tbsp</li>
+        <li>Milk - 3 tbsp</li>
+        <li>Oil - 2 tbsp</li>
+      </ul>
+   <button onclick="toggleSteps('steps2')">Show Steps</button>
+
+  <div id="steps2" style="display: none;">
+
+
+      <p><strong>Steps:Preheat oven to 160°C (320°F). Grease and line a 9-inch round cake tin.
+
+<li>Melt wet ingredients:
+In a saucepan, add water, butter, and chopped chocolate. Heat on low until fully melted and smooth. Remove from heat and let it cool slightly.</li>
+
+<li>Melt wet ingredients:
+Mix dry ingredients:
+In a large bowl, sift together flour, cocoa powder, baking soda, and sugar.</li>
+
+<li>Melt wet ingredients:
+Combine wet and dry:
+Pour the melted chocolate mixture into the dry ingredients. Mix until combined.</li>
+
+<li>Melt wet ingredients:
+Add eggs & vanilla:
+Beat in eggs and vanilla extract until smooth and glossy.</li>
+
+<li>Melt wet ingredients:
+Bake:
+Pour batter into the prepared tin. Bake for 60–70 minutes or until a skewer inserted into the center comes out with moist crumbs (not wet batter).</li>
+
+<li>Melt wet ingredients:
+Cool completely:
+Let the cake cool in the tin for 15 mins, then transfer to a wire rack.</li>
+
+<li>Melt wet ingredients:
+(Optional) Make ganache frosting:
+Heat cream until just simmering. Pour over chopped dark chocolate and let sit for 2 minutes. Stir until smooth. Spread over the cooled cake.</li>
+
+<li>Melt wet ingredients:
+Serve & enjoy!
+Slice and serve the cake as-is or with a scoop of vanilla ice cream.</li>
+
+</strong> </p>
+    </div>
+    <button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+    
+
+  </main>
+ 
+  <script>
+    let cartCount = 0;
+
+    function addToCart(itemName) {
+      cartCount++;
+      document.getElementById("cartCount").textContent = cartCount;
+
+      const li = document.createElement("li");
+      li.textContent = itemName;
+      document.getElementById("cartItems").appendChild(li);
+    }
+  </script>
+ <script>
+    function toggleSteps(id) {
+      const steps = document.getElementById(id);
+      steps.style.display = steps.style.display === "none" ? "block" : "none";
+    }
+  </script>
+  <nav>
+   <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="desert.html">Desert</a></li>
+            <li><a href="Indian foods.html">Indian foods</a></li>
+            <li><a href="International dishes.html">International Dishes</a></li>
+            <li><a href="soups.html">Soups</a></li>
+            <li><a href="Cookies.html">Cookies</a></li>
+            <li><a href="Fast Food.html">Fast Food</a></li>
+           </ul>
+           </nav>
+ 
+  
+
+
+ 
+
+</body>
+</html>

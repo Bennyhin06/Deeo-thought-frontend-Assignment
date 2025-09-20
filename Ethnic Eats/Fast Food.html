@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="desert.css" />
+</head>
+<body>
+  <div class="cart">
+     &#128722;Cart: <span id="cartCount">0</span> items
+  </div>
+
+
+  
+
+  <main class="container">
+
+  
+    <div class="recipe-card">
+      <h2>chicken Cheese Burger</h2>
+      
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WvJOxuAvlQU?si=49Faf8fSTRqzob2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <strong>Ingredients:</strong>
+      <ul>
+        <li>2 burger buns</li>
+        <li>2 chicken/veg patties</li>
+        <li>2 slices cheddar cheese</li>
+        <li>Lettuce, tomato, onion</li>
+        <li>Ketchup, mayo</li>
+      </ul>
+      <button onclick="toggleSteps('steps1')">Show Steps</button>
+
+  <div id="steps1" style="display: none;">
+  <strong>Steps:</strong>
+      <ol>
+        <li>Cook patties. Toast buns.</li>
+        <li>Add condiments and veggies.</li>
+        <li>Place patty and cheese.</li>
+        <li>Assemble and serve hot.</li>
+      </ol>
+  
+  </div>
+  
+
+
+
+<button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+
+
+    
+    <div class="recipe-card">
+      <h2>French Fries</h2>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CYhYSoJrOLg?si=IWUuLCw7ADYdN8QA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     <strong>Ingredients:</strong>
+      <ul>
+        <li>3 large potatoes</li>
+        <li>Oil for frying</li>
+        <li>Salt</li>
+      </ul>
+   <button onclick="toggleSteps('steps2')">Show Steps</button>
+
+  <div id="steps2" style="display: none;">
+
+<strong>Steps:</strong>
+      <ol>
+        <li>Cut potatoes into sticks.</li>
+        <li>Soak, dry, and deep fry.</li>
+        <li>Sprinkle salt and serve.</li>
+      </ol>
+      
+    </div>
+    <button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+
+
+  </main>
+ 
+  <script>
+    let cartCount = 0;
+
+    function addToCart(itemName) {
+      cartCount++;
+      document.getElementById("cartCount").textContent = cartCount;
+
+      const li = document.createElement("li");
+      li.textContent = itemName;
+      document.getElementById("cartItems").appendChild(li);
+    }
+  </script>
+ <script>
+    function toggleSteps(id) {
+      const steps = document.getElementById(id);
+      steps.style.display = steps.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+  
+
+ 
+
+</body>
+</html>

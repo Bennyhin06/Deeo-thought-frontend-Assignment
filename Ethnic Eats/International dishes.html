@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="International dishes.css" />
+</head>
+<body>
+  <div class="cart">
+     &#128722;Cart: <span id="cartCount">0</span> items
+  </div>
+
+
+  
+
+  <main class="container">
+
+  
+    <div class="recipe-card">
+      <h2>Tacos al Pastor (Mexico)</h2>
+      
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DGJJ-7rdpaE?si=GeOBSjEeewfZjKnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h3>Ingredients</h3>
+<ul>
+
+
+      <li>500g pork shoulder (thinly sliced)</li>
+      <li>3 dried guajillo chilies (seeded & soaked)</li>
+      <li>2 garlic cloves</li>
+      <li>1/2 onion (chopped)</li>
+      <li>1/2 cup pineapple juice</li>
+      <li>2 tbsp white vinegar</li>
+      <li>1 tsp oregano</li>
+      <li>1/2 tsp cumin</li>
+      <li>Salt and pepper to taste</li>
+      <li>1 tbsp achiote paste (optional)</li>
+      <li>1 tbsp oil (for cooking)</li>
+      <li>Corn tortillas</li>
+      <li>Fresh pineapple (diced)</li>
+      <li>Chopped onions & cilantro (for topping)</li>
+      <li>Lime wedges (to serve)</li>
+    </ul>
+    
+      <button onclick="toggleSteps('steps1')">Show Steps</button>
+
+  <div id="steps1" style="display: none;">
+
+  <ul>
+      <li>Blend chilies, garlic, onion, pineapple juice, vinegar, oregano, cumin, achiote paste, salt, and pepper into a marinade.</li>
+      <li>Coat pork with marinade and refrigerate for 4+ hours.</li>
+      <li>Grill or pan-fry pork slices until browned.</li>
+      <li>Warm tortillas and assemble tacos with pork, pineapple, onion, and cilantro.</li>
+      <li>Serve with lime wedges. Enjoy!</li>
+    </ul>
+  </div>
+
+
+
+<button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+
+
+    
+    <div class="recipe-card">
+      <h2> Spaghetti Carbonara (Italy)</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/sjh2CDAcNIY?si=c-hUyTOS9xLhDBSZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+     <h3>Ingredients:</h3>
+    <ul>
+      <li>200g spaghetti</li>
+      <li>100g pancetta or bacon (diced)</li>
+      <li>2 large eggs</li>
+      <li>1/2 cup grated Pecorino Romano or Parmesan</li>
+      <li>Fresh black pepper</li>
+      <li>Salt (for pasta water)</li>
+      <li>Optional: 1 garlic clove</li>
+    </ul>
+   <button onclick="toggleSteps('steps2')">Show Steps</button>
+
+  <div id="steps2" style="display: none;">
+
+<h3>Steps:</h3>
+    <ul>
+      <li>Cook spaghetti in salted water until al dente. Save 1/2 cup pasta water.</li>
+      <li>Fry pancetta (and garlic if using) until crispy.</li>
+      <li>Whisk eggs, cheese, and pepper in a bowl.</li>
+      <li>Add drained pasta to pancetta, remove from heat, then stir in egg mixture.</li>
+      <li>Mix well, add reserved water for creaminess, and serve hot with extra cheese.</li>
+    </ul>
+
+    </div>
+    <button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+    
+
+  </main>
+ 
+  <script>
+    let cartCount = 0;
+
+    function addToCart(itemName) {
+      cartCount++;
+      document.getElementById("cartCount").textContent = cartCount;
+
+      const li = document.createElement("li");
+      li.textContent = itemName;
+      document.getElementById("cartItems").appendChild(li);
+    }
+  </script>
+ <script>
+    function toggleSteps(id) {
+      const steps = document.getElementById(id);
+      steps.style.display = steps.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+  
+
+
+ 
+
+</body>
+</html>

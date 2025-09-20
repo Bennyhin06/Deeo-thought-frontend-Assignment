@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="International dishes.css" />
+</head>
+<body>
+  <div class="cart">
+     &#128722;Cart: <span id="cartCount">0</span> items
+  </div>
+
+
+  
+
+  <main class="container">
+
+  
+    <div class="recipe-card">
+      <h2>Tomato Basil Soup</h2>
+      
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aiP37YwU81Y?si=IcSbZhaqngGgkcGC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        <li>6 ripe tomatoes (chopped)</li>
+        <li>1 tbsp olive oil</li>
+        <li>1 onion (chopped)</li>
+        <li>2 garlic cloves (minced)</li>
+        <li>2 cups vegetable broth</li>
+        <li>½ cup fresh basil leaves</li>
+        <li>Salt and pepper to taste</li>
+    </ul>
+    
+      <button onclick="toggleSteps('steps1')">Show Steps</button>
+
+  <div id="steps1" style="display: none;">
+
+  <ol>
+      <li>Sauté onions and garlic in oil.</li>
+        <li>Add tomatoes and cook for 10 mins.</li>
+        <li>Add broth and boil. Simmer for 15 mins.</li>
+        <li>Blend and stir in basil. Season and serve.</li>
+    </0l>
+  </div>
+
+
+
+<button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+
+
+    
+    <div class="recipe-card">
+      <h2> Creamy Mushroom Soup</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/t6gGmy-q_ss?si=H7ZViW-LGRMbjZ3J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     <h3>Ingredients:</h3>
+    <ul>
+       <li>200g mushrooms (sliced)</li>
+        <li>1 onion (chopped)</li>
+        <li>2 garlic cloves</li>
+        <li>2 tbsp butter</li>
+        <li>2 cups milk</li>
+        <li>1 tbsp flour</li>
+        <li>Salt and pepper to taste</li>
+    </ul>
+   <button onclick="toggleSteps('steps2')">Show Steps</button>
+
+  <div id="steps2" style="display: none;">
+
+<h3>Steps:</h3>
+    <ol>
+       <li>Sauté onion and garlic in butter.</li>
+        <li>Add mushrooms and cook until soft.</li>
+        <li>Add flour, then slowly stir in milk.</li>
+        <li>Cook until thick, blend, season, serve.</li>
+    </0l>
+
+    </div>
+    <button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+    
+
+  </main>
+ 
+  <script>
+    let cartCount = 0;
+
+    function addToCart(itemName) {
+      cartCount++;
+      document.getElementById("cartCount").textContent = cartCount;
+
+      const li = document.createElement("li");
+      li.textContent = itemName;
+      document.getElementById("cartItems").appendChild(li);
+    }
+  </script>
+ <script>
+    function toggleSteps(id) {
+      const steps = document.getElementById(id);
+      steps.style.display = steps.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+  
+
+
+ 
+
+</body>
+</html>

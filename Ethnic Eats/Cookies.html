@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="desert.css" />
+</head>
+<body>
+  <div class="cart">
+     &#128722;Cart: <span id="cartCount">0</span> items
+  </div>
+
+
+  
+
+  <main class="container">
+
+  
+    <div class="recipe-card">
+      <h2>Chocolate Chip Cookies</h2>
+      
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/YEZPxhMneOc?si=d0_ooYSO1cEj9Uvx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <ul>
+         <li>1 cup butter</li>
+        <li>1 cup sugar</li>
+        <li>2 cups all-purpose flour</li>
+        <li>1 tsp vanilla extract</li>
+        <li>1 tsp baking soda</li>
+        <li>1 cup chocolate chips</li>
+        
+      </ul>
+    
+      <button onclick="toggleSteps('steps1')">Show Steps</button>
+
+  <div id="steps1" style="display: none;">
+
+  <ol>
+        <li>Cream butter and sugar.</li>
+        <li>Add vanilla, flour, and baking soda.</li>
+        <li>Fold in chocolate chips.</li>
+        <li>Bake at 180°C for 10–12 mins.</li>
+      </ol>
+  </div>
+  
+
+
+
+<button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+
+
+    
+    <div class="recipe-card">
+      <h2>Oatmeal Raisin Cookies<</h2>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/kSvexYR2w6E?si=iAvs2Inb4HAxNJrH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <ul>
+       Oatmeal Raisin Cookies< 
+      </ul>
+   <button onclick="toggleSteps('steps2')">Show Steps</button>
+
+  <div id="steps2" style="display: none;">
+
+ <strong>Steps:</strong>
+      <ol>
+        <li>Mix butter and sugar, add egg.</li>
+        <li>Stir in oats, flour, cinnamon, raisins.</li>
+        <li>Drop on baking tray.</li>
+        <li>Bake at 175°C for 12 mins.</li>
+      </ol>
+     </div>
+     <button onclick="addToCart('Fruit Custard')">Add to Cart</button>
+    
+
+  </main>
+ 
+  <script>
+    let cartCount = 0;
+
+    function addToCart(itemName) {
+      cartCount++;
+      document.getElementById("cartCount").textContent = cartCount;
+
+      const li = document.createElement("li");
+      li.textContent = itemName;
+      document.getElementById("cartItems").appendChild(li);
+    }
+  </script>
+ <script>
+    function toggleSteps(id) {
+      const steps = document.getElementById(id);
+      steps.style.display = steps.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+  
+
+
+ 
+
+</body>
+</html>
